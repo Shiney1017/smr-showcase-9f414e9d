@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shine My Ride 757 — 2027 Tactile Craft & Process Showcase</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-obsidian: #070C15;
+    --bg-navy: #101B2B;
+    --action-blue: #1575D4;
+    --sky-accent: #75C9FF;
+    --gold-luxe: #F5A623;
+    --emerald-qa: #10B981;
+    --tape-blue: #2563EB;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: var(--bg-obsidian);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  /* TREND #4: REAL FOUND TEXTURE OVERLAY (Micro-grain + Hydrophobic Specular Sheen) */
+  .tactile-wrapper {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(21, 117, 212, 0.18), transparent 45%),
+      radial-gradient(circle at 85% 75%, rgba(245, 166, 35, 0.10), transparent 40%),
+      linear-gradient(180deg, #070C15 0%, #0D1624 100%);
+  }
+
+  /* ANALOG STAMPED TOP BAR (Trend #1 & #6) */
+  .top-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(16, 27, 43, 0.85);
+    border: 1px solid rgba(117, 201, 255, 0.22);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(10px);
+  }
+  .mono-stamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sky-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .live-dot {
+    width: 8px; height: 8px;
+    background: var(--emerald-qa);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--emerald-qa);
+  }
+  .verified-pill {
+    background: rgba(245, 166, 35, 0.14);
+    border: 1px solid rgba(245, 166, 35, 0.45);
+    color: #FDE68A;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+
+  /* HERO GRID */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 920px) {
+    .hero-grid { grid-template-columns: 1fr; }
+  }
+
+  .eyebrow-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--gold-luxe);
+    border-left: 3px solid var(--gold-luxe);
+    padding-left: 10px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+  h1.hero-title {
+    font-size: clamp(2.1rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .chalk-underline {
+    font-family: 'Caveat', cursive;
+    font-size: 1.22em;
+    color: var(--sky-accent);
+    font-weight: 700;
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 1.03rem;
+    margin-bottom: 24px;
+    max-width: 580px;
+  }
+
+  /* TREND #3 & #4: INTERACTIVE 50/50 3M PAINTER'S TAPE INSPECTION BAY */
+  .inspection-card {
+    background: var(--bg-navy);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+    position: relative;
+  }
+  .inspection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+  .hood-viewport {
+    position: relative;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    user-select: none;
+    background: #05080f;
+    border: 1px solid rgba(117, 201, 255, 0.25);
+  }
+  /* RIGHT SIDE: CURED SYSTEM X MIRROR FINISH + HYDROPHOBIC BEADS */
+  .layer-corrected {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 70% 42%, rgba(255,255,255,0.92) 0%, rgba(117,201,255,0.35) 14%, rgba(7,12,21,0.96) 52%),
+      linear-gradient(135deg, #050811 0%, #0E1D34 50%, #04070D 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 16px;
+  }
+  /* LEFT SIDE: UNCORRECTED WASH SWIRLS (COBWEB RINGS) */
+  .layer-swirled {
+    position: absolute;
+    inset: 0;
+    width: 50%;
+    overflow: hidden;
+    background:
+      repeating-radial-gradient(circle at 32% 45%, rgba(255,255,255,0.16) 0px, rgba(255,255,255,0.02) 2px, transparent 5px),
+      radial-gradient(circle at 32% 45%, rgba(255,248,220,0.75) 0%, rgba(148,163,184,0.28) 28%, #161C26 70%);
+  }
+  /* PHYSICAL 3M PAINTER'S TAPE DIVIDER (Trend #1: Analog Medium in Digital UI) */
+  .painters-tape-divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 14px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #1D4ED8, #3B82F6, #1E40AF);
+    box-shadow: 0 0 16px rgba(0,0,0,0.85);
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .painters-tape-divider::after {
+    content: "3M TAPE 50/50 SPLIT";
+    writing-mode: vertical-rl;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.9);
+  }
+  /* TREND #6: HANDWRITTEN WAX-PENCIL TECH NOTES */
+  .tech-wax-note {
+    position: absolute;
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+    font-weight: 700;
+    pointer-events: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .note-left {
+    top: 16px; left: 14px;
+    color: #FCA5A5;
+    background: rgba(15, 23, 42, 0.78);
+    border: 1px dashed rgba(248, 113, 113, 0.5);
+    transform: rotate(-2deg);
+  }
+  .note-right {
+    bottom: 16px; right: 14px;
+    color: #6EE7B7;
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    transform: rotate(1.5deg);
+  }
+
+  .slider-control-bar {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .slider-control-bar input[type="range"] {
+    flex: 1;
+    accent-color: var(--action-blue);
+    cursor: pointer;
+  }
+
+  /* PROCESS PROOF RECEIPT PILLS (Trend #3: Show Your Work) */
+  .process-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .process-Step {
+    background: rgba(7, 12, 21, 0.75);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.76rem;
+  }
+  .process-Step strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--sky-accent);
+    margin-bottom: 2px;
+  }
+
+  /* RIGHT COLUMN: UN-GATED ESTIMATOR & SQUARE / 3-PHOTO SMS HANDOFF */
+  .estimator-panel {
+    background: linear-gradient(165deg, #101B2B 0%, #0A121E 100%);
+    border: 1px solid rgba(21, 117, 212, 0.4);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  }
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .step-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 14px 0 8px;
+    display: block;
+  }
+  .pill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .select-pill {
+    background: rgba(7, 12, 21, 0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text-main);
+    padding: 11px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s ease;
+  }
+  .select-pill.active {
+    background: rgba(21, 117, 212, 0.22);
+    border-color: var(--sky-accent);
+    box-shadow: 0 0 0 1px var(--sky-accent);
+  }
+  .select-pill span {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .quote-receipt-box {
+    margin-top: 18px;
+    background: #070C15;
+    border: 1px dashed rgba(117, 201, 255, 0.35);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .price-big {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+  }
+  .gate-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;
+  }
+  .cta-primary {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #1575D4, #2563EB);
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(21, 117, 212, 0.4);
+  }
+  .cta-secondary {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(245, 166, 35, 0.45);
+    background: rgba(245, 166, 35, 0.08);
+    color: #FDE68A;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+  .disclaimer {
+    margin-top: 10px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="tactile-wrapper">
+  <!-- TOP ANALOG PROOF BAR -->
+  <div class="top-trust-strip">
+    <div class="mono-stamp">
+      <span class="live-dot"></span>
+      SHINE MY RIDE 757 // HAMPTON ROADS PROVING GROUND (757-689-9821)
+    </div>
+    <div class="verified-pill">★ 4.9 stars from 307+ Google reviews • System X Partner</div>
+  </div>
+
+  <div class="hero-grid">
+    <!-- LEFT: TACTILE 50/50 PROCESS SHOWCASE -->
+    <div>
+      <span class="eyebrow-tag">Veteran-Owned • Automotive • Marine • Aviation</span>
+      <h1 class="hero-title">
+        We Don’t Hide Behind Stock Photos. <span class="chalk-underline">Inspect the 50/50 Tape Line.</span>
+      </h1>
+      <p class="hero-sub">
+        Drag the 3M painter's tape across the hood below to see how our halogen swirl-finder inspection and System X ceramic process transforms tunnel-washed clearcoat—backed by 4-corner arrival documentation and 5-photo completion QA.
+      </p>
+
+      <div class="inspection-card">
+        <div class="inspection-header">
+          <span>OPTICAL INSPECTION // HALOGEN BEAM 4500K</span>
+          <span id="tapeReadout">50% SWIRLS / 50% SYSTEM X CERAMIC</span>
+        </div>
+
+        <div class="hood-viewport" id="hoodViewport">
+          <div class="layer-corrected"></div>
+          <div class="layer-swirled" id="swirledLayer"></div>
+          <div class="painters-tape-divider" id="tapeDivider"></div>
+
+          <div class="tech-wax-note note-left">
+            ← Tunnel-wash cobweb swirls (Unprotected)
+          </div>
+          <div class="tech-wax-note note-right">
+            2-Step Polish + System X Ceramic (&gt;110° Bead) →
+          </div>
+        </div>
+
+        <div class="slider-control-bar">
+          <span style="font-size:0.78rem; color:var(--text-muted);">Drag 3M Tape:</span>
+          <input type="range" id="tapeSlider" min="8" max="92" value="50" />
+        </div>
+
+        <div class="process-strip">
+          <div class="process-Step">
+            <strong>01 // ARRIVAL LOCK</strong>
+            4-corner pre-inspection photos before a mitt touches your paint.
+          </div>
+          <div class="process-Step">
+            <strong>02 // RE-CLEAN CHEM</strong>
+            pH-neutral decontamination + true rotary/DA correction.
+          </div>
+          <div class="process-Step">
+            <strong>03 // 5-PHOTO QA</strong>
+            Hood, roof, wheels, profile &amp; cabin verified before sign-off.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: UN-GATED ESTIMATOR WITH DIRECT SQUARE / 3-PHOTO SMS HANDOFF -->
+    <div class="estimator-panel">
+      <div class="panel-header">
+        <div>
+          <h2 style="font-size:1.25rem; font-weight:800;">Instant Price &amp; Process Builder</h2>
+          <p style="font-size:0.8rem; color:var(--text-muted);">See your baseline before entering your name or phone.</p>
+        </div>
+        <span class="mono-stamp" style="font-size:0.7rem;">NO FORM WALL</span>
+      </div>
+
+      <label class="step-label">1. Select Vehicle Size Tier</label>
+      <div class="pill-grid" id="sizeGrid">
+        <button class="select-pill" data-size="coupe" onclick="setSize('coupe', this)">Coupe / 2-Door<span>Baseline Tier 1</span></button>
+        <button class="select-pill active" data-size="sedan" onclick="setSize('sedan', this)">Sedan / Compact<span>Most Popular</span></button>
+        <button class="select-pill" data-size="midsuv" onclick="setSize('midsuv', this)">Mid-Size SUV<span>2-Row Crossover</span></button>
+        <button class="select-pill" data-size="largesuv" onclick="setSize('largesuv', this)">Large SUV / Truck<span>3-Row / Full-Size</span></button>
+      </div>
+
+      <label class="step-label">2. Select Protection &amp; Correction Scope</label>
+      <div class="pill-grid" id="pkgGrid">
+        <button class="select-pill active" data-pkg="silver_full" onclick="setPkg('silver_full', this)">Silver Full Detail<span>Inside + Out Reset</span></button>
+        <button class="select-pill" data-pkg="gold_full" onclick="setPkg('gold_full', this)">Gold Full Detail<span>Deep Interior + Clay/Seal</span></button>
+        <button class="select-pill" data-pkg="ceramic_silver" onclick="setPkg('ceramic_silver', this)">System X Ceramic<span>5-Yr Protection + Polish</span></button>
+        <button class="select-pill" data-pkg="shine_club" onclick="setPkg('shine_club', this)">The Shine Club<span>Recurring Monthly Care</span></button>
+      </div>
+
+      <div class="quote-receipt-box">
+        <div class="price-row">
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; font-family:'JetBrains Mono',monospace;" id="selectedTitle">SEDAN // SILVER FULL DETAIL</div>
+            <div class="price-big" id="priceOutput">$250</div>
+          </div>
+          <span class="gate-badge" id="intakeModeBadge">INSTANT SQUARE SLOT</span>
+        </div>
+        <p style="font-size:0.8rem; color:var(--sky-accent); margin-top:6px;" id="processExplanation">
+          ✓ Standard Full Detail: Bypasses photo underwriting for immediate Square appointment hold.
+        </p>
+
+        <a id="primaryActionBtn" class="cta-primary" href="sms:17576899821?&body=Hi%20Shine%20My%20Ride%20757%2C%20I%27d%20like%20to%20book%20a%20Sedan%20Silver%20Full%20Detail%20(%24250%20baseline).">
+          Lock In My Price via SMS (757-689-9821) →
+        </a>
+        <a class="cta-secondary" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">
+          Or Book Directly in Square Appointments
+        </a>
+        <p class="disclaimer">
+          *Prices shown are baseline estimates and are subject to change based on final vehicle condition, size, and location. Final calendar dates confirmed upon written scheduling review.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slider = document.getElementById('tapeSlider');
+  const swirledLayer = document.getElementById('swirledLayer');
+  const tapeDivider = document.getElementById('tapeDivider');
+  const tapeReadout = document.getElementById('tapeReadout');
+
+  slider.addEventListener('input', (e) => {
+    const val = e.target.value;
+    swirledLayer.style.width = val + '%';
+    tapeDivider.style.left = val + '%';
+    tapeReadout.textContent = `${val}% SWIRLS / ${100 - val}% SYSTEM X CERAMIC`;
+  });
+
+  const pricingMatrix = {
+    silver_full: {
+      label: 'SILVER FULL DETAIL',
+      prices: { coupe: 230, sedan: 250, midsuv: 290, largesuv: 350 },
+      badge: 'INSTANT SQUARE SLOT',
+      note: '✓ Standard Full Detail: Bypasses photo friction for immediate appointment scheduling.'
+    },
+    gold_full: {
+      label: 'GOLD FULL DETAIL',
+      prices: { coupe: 450, sedan: 525, midsuv: 600, largesuv: 675 },
+      badge: 'INSTANT SQUARE SLOT',
+      note: '✓ Deep Interior + Exterior Clay & Sealant: Includes 4-corner arrival & 5-photo QA receipt.'
+    },
+    ceramic_silver: {
+      label: 'SYSTEM X 5-YR CERAMIC',
+      prices: { coupe: 1400, sedan: 1500, midsuv: 1650, largesuv: 1850 },
+      badge: '3-PHOTO OPTICAL GATE',
+      note: '⚡ Triggers 3-Photo Sunlit Optical Underwriting via SMS so we dial in the exact polish stage.'
+    },
+    shine_club: {
+      label: 'THE SHINE CLUB MEMBERSHIP',
+      prices: { coupe: 149, sedan: 149, midsuv: 149, largesuv: 149 },
+      badge: 'MONTHLY RECURRING',
+      note: '★ Priority recurring maintenance care ($149/mo standard | $99/mo founding rate, locked while you stay a member).'
+    }
+  };
+
+  let currentSize = 'sedan';
+  let currentPkg = 'silver_full';
+
+  function setSize(size, btn) {
+    currentSize = size;
+    document.querySelectorAll('#sizeGrid .select-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderQuote();
+  }
+
+  function setPkg(pkg, btn) {
+    currentPkg = pkg;
+    document.querySelectorAll('#pkgGrid .select-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderQuote();
+  }
+
+  function renderQuote() {
+    const pkgObj = pricingMatrix[currentPkg];
+    const price = pkgObj.prices[currentSize];
+    const sizeLabel = currentSize.toUpperCase();
+    document.getElementById('selectedTitle').textContent = `${sizeLabel} // ${pkgObj.label}`;
+    document.getElementById('priceOutput').textContent = currentPkg === 'shine_club' ? `$${price}/mo` : `$${price}`;
+    document.getElementById('intakeModeBadge').textContent = pkgObj.badge;
+    document.getElementById('processExplanation').textContent = pkgObj.note;
+
+    const smsBody = encodeURIComponent(
+      currentPkg === 'ceramic_silver'
+        ? `Hi Shine My Ride 757, I want to lock in a ${sizeLabel} ${pkgObj.label} ($${price} baseline). Ready to send my 3 sunlit paint photos!`
+        : `Hi Shine My Ride 757, I'd like to schedule a ${sizeLabel} ${pkgObj.label} ($${price} baseline).`
+    );
+    document.getElementById('primaryActionBtn').href = `sms:17576899821?&body=${smsBody}`;
+  }
+</script>
+</body>
+</html>
