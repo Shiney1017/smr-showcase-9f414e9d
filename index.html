@@ -305,6 +305,10 @@
     border-radius: 14px;
     padding: 16px;
   }
+  .presenter-wrap { margin: 14px 0; }
+  .presenter-video { width: 100%; max-width: 360px; aspect-ratio: 1/1; border-radius: 12px; background:#000; display:block; }
+  .presenter-video[hidden] { display:none; }
+  .presenter-cap { font-size:0.72rem; color:var(--text-muted); margin-top:4px; }
   .price-row {
     display: flex;
     justify-content: space-between;
@@ -461,6 +465,11 @@
         <button class="select-pill" data-pkg="shine_club" onclick="setPkg('shine_club', this)">The Shine Club<span>Recurring Monthly Care</span></button>
       </div>
 
+      <div class="presenter-wrap">
+        <video id="presenter7" class="presenter-video" controls playsinline preload="none" poster="assets/higgsfield/higgs_avatar_bypass_gate.jpg" aria-label="Presenter: standard details book instantly"><source src="assets/higgsfield/higgs_avatar_bypass_gate.webm" type="video/webm"><source src="assets/higgsfield/higgs_avatar_bypass_gate.mp4" type="video/mp4"></video>
+        <video id="presenter8" class="presenter-video" controls playsinline preload="none" poster="assets/higgsfield/higgs_avatar_3photo_gate.jpg" aria-label="Presenter: ceramic 3-photo review" hidden><source src="assets/higgsfield/higgs_avatar_3photo_gate.webm" type="video/webm"><source src="assets/higgsfield/higgs_avatar_3photo_gate.mp4" type="video/mp4"></video>
+        <p class="presenter-cap">Tap to play with sound</p>
+      </div>
       <div class="quote-receipt-box">
         <div class="price-row">
           <div>
@@ -559,6 +568,9 @@
     document.getElementById('priceOutput').textContent = currentPkg === 'shine_club' ? `$${price}/mo` : `$${price}`;
     document.getElementById('intakeModeBadge').textContent = pkgObj.badge;
     document.getElementById('processExplanation').textContent = pkgObj.note;
+    const isCer = currentPkg === 'ceramic_silver';
+    const p7 = document.getElementById('presenter7'), p8 = document.getElementById('presenter8');
+    if (p7 && p8) { (isCer ? p7 : p8).pause(); p7.hidden = isCer; p8.hidden = !isCer; }
 
     const smsBody = encodeURIComponent(
       currentPkg === 'ceramic_silver'
