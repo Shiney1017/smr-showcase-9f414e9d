@@ -1,0 +1,80 @@
+{
+ "higgs_layer_systemx_hydrophobic.mp4": {
+  "frames": 121,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.033,
+  "seam_after": 0.0673,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 23,
+  "webm_crf": 32,
+  "mp4_kb": 1024,
+  "webm_kb": 891
+ },
+ "higgs_layer_uncorrected_swirls.mp4": {
+  "frames": 121,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.2378,
+  "seam_after": 0.0194,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 28,
+  "webm_crf": 24,
+  "mp4_kb": 586,
+  "webm_kb": 1020
+ },
+ "higgs_spec_aviation.mp4": {
+  "frames": 97,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.2091,
+  "seam_after": 0.0314,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 28,
+  "webm_crf": 32,
+  "mp4_kb": 748,
+  "webm_kb": 945
+ },
+ "higgs_spec_clay_hangar.mp4": {
+  "frames": 121,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.3159,
+  "seam_after": 0.0614,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 28,
+  "webm_crf": 32,
+  "mp4_kb": 828,
+  "webm_kb": 777
+ },
+ "higgs_spec_marine.mp4": {
+  "frames": 97,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.1971,
+  "seam_after": 0.0356,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 23,
+  "webm_crf": 24,
+  "mp4_kb": 1112,
+  "webm_kb": 1098
+ },
+ "higgs_spec_shine_club.mp4": {
+  "frames": 97,
+  "fps": 24.0,
+  "src": "1920x1080",
+  "seam_before": 0.1459,
+  "seam_after": 0.031,
+  "stitched": true,
+  "res": 1080,
+  "mp4_crf": 23,
+  "webm_crf": 24,
+  "mp4_kb": 874,
+  "webm_kb": 783
+ }
+}
