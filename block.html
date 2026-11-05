@@ -1,0 +1,133 @@
+<!-- SMR 757 — 2027 Tactile Proof Upgrade (Squarespace Code Block). STAGED 2026-11-04. All CSS scoped under .smr27. No AI video; CSS textures only. Prices = live Square. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Caveat:wght@700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+.smr27{--ob:#070C15;--nv:#101B2B;--ab:#1575D4;--sky:#75C9FF;--gold:#F5A623;--em:#10B981;--tx:#F8FAFC;--mu:#94A3B8;
+  position:relative;max-width:1180px;margin:0 auto;padding:28px 18px 48px;color:var(--tx);font-family:'Inter',sans-serif;line-height:1.5;border-radius:18px;
+  background-color:#0A111C;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(255,255,255,.01) 0 1px,transparent 1px 4px);}
+.smr27 *{box-sizing:border-box;margin:0;padding:0}
+.smr27 .s-strip{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;background:rgba(16,27,43,.9);border:1px solid rgba(117,201,255,.22);border-radius:12px;margin-bottom:26px}
+.smr27 .s-mono{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);display:flex;align-items:center;gap:8px}
+.smr27 .s-dot{width:8px;height:8px;background:var(--em);border-radius:50%;box-shadow:0 0 10px var(--em)}
+.smr27 .s-pill{background:rgba(245,166,35,.14);border:1px solid rgba(245,166,35,.45);color:#FDE68A;font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:999px}
+.smr27 .s-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:start}
+@media (max-width:920px){.smr27 .s-grid{grid-template-columns:1fr}}
+.smr27 .s-eyebrow{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.76rem;color:var(--gold);border-left:3px solid var(--gold);padding-left:10px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
+.smr27 .s-h1{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;line-height:1.08;letter-spacing:-.025em;margin-bottom:16px;color:var(--tx)}
+.smr27 .s-caveat{font-family:'Caveat',cursive;font-size:1.2em;color:var(--sky);display:inline-block;transform:rotate(-1deg)}
+.smr27 .s-sub{color:var(--mu);font-size:1.02rem;margin-bottom:22px;max-width:580px}
+.smr27 .s-card{background:var(--nv);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;box-shadow:0 24px 48px rgba(0,0,0,.55)}
+.smr27 .s-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--mu)}
+.smr27 .s-hood{position:relative;height:300px;border-radius:12px;overflow:hidden;user-select:none;border:1px solid rgba(117,201,255,.25)}
+/* corrected: deep mirror clearcoat + halogen beam reflection + hydrophobic beads */
+.smr27 .s-fixed{position:absolute;inset:0;z-index:0;background-color:#05080f;
+  background-image:radial-gradient(circle at 22% 30%,rgba(255,255,255,.55) 0 3px,rgba(117,201,255,.25) 4px,transparent 7px),radial-gradient(circle at 63% 58%,rgba(255,255,255,.5) 0 4px,rgba(117,201,255,.22) 5px,transparent 9px),radial-gradient(circle at 80% 22%,rgba(255,255,255,.5) 0 2px,transparent 5px),radial-gradient(circle at 41% 78%,rgba(255,255,255,.45) 0 3px,transparent 6px),radial-gradient(circle at 88% 74%,rgba(255,255,255,.45) 0 2px,transparent 5px),radial-gradient(circle at 52% 40%,rgba(255,247,220,.55),rgba(255,247,220,.08) 9%,transparent 22%),linear-gradient(160deg,#0b1424,#05080f 60%)}
+/* swirled: cobweb rings around halogen hotspot */
+.smr27 .s-swirl{position:absolute;inset:0;z-index:1;clip-path:inset(0 50% 0 0);background-color:#161C26;
+  background-image:radial-gradient(circle at 52% 40%,rgba(255,247,220,.5),transparent 14%),repeating-radial-gradient(circle at 52% 40%,rgba(255,255,255,.10) 0 1px,transparent 2px 7px),linear-gradient(160deg,#1d2533,#0f141c)}
+.smr27 .s-tape{position:absolute;top:0;bottom:0;left:50%;width:16px;transform:translateX(-50%);z-index:2;display:flex;align-items:center;justify-content:center;box-shadow:0 0 16px rgba(0,0,0,.85);
+  background-color:#2F6FD8;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 3px)}
+.smr27 .s-tape::after{content:"3M TAPE 50/50 SPLIT";writing-mode:vertical-rl;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.92)}
+.smr27 .s-note{position:absolute;z-index:3;font-family:'Caveat',cursive;font-size:1.25rem;font-weight:700;pointer-events:none;padding:4px 10px;border-radius:6px}
+.smr27 .s-nl{top:14px;left:14px;color:#FCA5A5;background:rgba(15,23,42,.78);border:1px dashed rgba(248,113,113,.5);transform:rotate(-2deg)}
+.smr27 .s-nr{bottom:14px;right:14px;color:#6EE7B7;background:rgba(15,23,42,.82);border:1px solid rgba(16,185,129,.5);transform:rotate(1.5deg)}
+.smr27 .s-ctl{margin-top:14px;display:flex;align-items:center;gap:12px;font-size:.78rem;color:var(--mu)}
+.smr27 .s-ctl input{flex:1;accent-color:var(--ab);cursor:pointer}
+.smr27 .s-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+@media (max-width:560px){.smr27 .s-steps{grid-template-columns:1fr}}
+.smr27 .s-step{background:rgba(7,12,21,.75);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;font-size:.76rem;color:var(--tx)}
+.smr27 .s-step strong{display:block;font-family:'JetBrains Mono',monospace;color:var(--sky);margin-bottom:2px}
+/* brushed Alclad aluminum panel */
+.smr27 .s-panel{border:1px solid rgba(21,117,212,.4);border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.6);background-color:#101B2B;
+  background-image:repeating-linear-gradient(90deg,rgba(200,215,230,.035) 0 1px,transparent 1px 2px,rgba(200,215,230,.02) 2px 3px,transparent 3px 5px)}
+.smr27 .s-h2{font-size:1.25rem;font-weight:800;color:var(--tx)}
+.smr27 .s-small{font-size:.8rem;color:var(--mu)}
+.smr27 .s-label{font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;color:var(--mu);margin:14px 0 8px;display:block}
+.smr27 .s-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.smr27 .s-btn{background:rgba(7,12,21,.7);border:1px solid rgba(255,255,255,.12);color:var(--tx);padding:11px 12px;border-radius:10px;font:600 .85rem 'Inter',sans-serif;cursor:pointer;text-align:left}
+.smr27 .s-btn.on{background:rgba(21,117,212,.22);border-color:var(--sky);box-shadow:0 0 0 1px var(--sky)}
+.smr27 .s-btn span{display:block;font-size:.72rem;color:var(--mu);font-weight:400}
+.smr27 .s-receipt{margin-top:18px;background:#070C15;border:1px dashed rgba(117,201,255,.35);border-radius:14px;padding:16px}
+.smr27 .s-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.smr27 .s-title{font-size:.75rem;color:var(--mu);text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.smr27 .s-price{font-size:2.1rem;font-weight:800;color:#fff}
+.smr27 .s-badge{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:4px 8px;border-radius:6px;background:rgba(16,185,129,.15);color:#6EE7B7}
+.smr27 .s-expl{font-size:.8rem;color:var(--sky);margin-top:6px}
+.smr27 a.s-cta{display:block;width:100%;margin-top:14px;padding:15px 18px;border-radius:12px;background:#1575D4;color:#fff;font-size:.98rem;font-weight:700;text-align:center;text-decoration:none;box-shadow:0 10px 24px rgba(21,117,212,.4)}
+.smr27 a.s-cta2{display:block;width:100%;margin-top:10px;padding:12px;border-radius:10px;border:1px solid rgba(245,166,35,.45);background:rgba(245,166,35,.08);color:#FDE68A;font-size:.84rem;font-weight:600;text-align:center;text-decoration:none}
+.smr27 .s-disc{margin-top:10px;font-size:.72rem;color:var(--mu);line-height:1.4}
+</style>
+<div class="smr27" id="smr27">
+  <div class="s-strip">
+    <div class="s-mono"><span class="s-dot"></span>SHINE MY RIDE 757 // HAMPTON ROADS (757-689-9821)</div>
+    <div class="s-pill">★ 4.9 stars from 307+ Google reviews • System X Partner</div>
+  </div>
+  <div class="s-grid">
+    <div>
+      <span class="s-eyebrow">Veteran-Owned • Automotive • Marine • Aviation</span>
+      <h2 class="s-h1">We Don’t Hide Behind Stock Photos. <span class="s-caveat">Inspect the 50/50 Tape Line.</span></h2>
+      <p class="s-sub">Drag the 3M painter's tape across the hood to see how our halogen swirl-finder inspection and System X ceramic process transforms tunnel-washed clearcoat, backed by 4-corner arrival documentation and 5-photo completion QA.</p>
+      <div class="s-card">
+        <div class="s-head"><span>OPTICAL INSPECTION // HALOGEN BEAM</span><span data-r="readout">50% SWIRLS / 50% SYSTEM X CERAMIC</span></div>
+        <div class="s-hood">
+          <div class="s-fixed" aria-hidden="true"></div>
+          <div class="s-swirl" data-r="swirl" aria-hidden="true"></div>
+          <div class="s-tape" data-r="tape"></div>
+          <div class="s-note s-nl">← Tunnel-wash cobweb swirls (Unprotected)</div>
+          <div class="s-note s-nr">2-Step Polish + System X Ceramic (&gt;110° Bead) →</div>
+        </div>
+        <div class="s-ctl"><span>Drag 3M Tape:</span><input type="range" data-r="slider" min="8" max="92" value="50" aria-label="Tape position"></div>
+        <div class="s-steps">
+          <div class="s-step"><strong>01 // ARRIVAL LOCK</strong>4-corner pre-inspection photos before a mitt touches your paint.</div>
+          <div class="s-step"><strong>02 // DECON + CORRECT</strong>pH-neutral decontamination + machine correction.</div>
+          <div class="s-step"><strong>03 // 5-PHOTO QA</strong>Hood, roof, wheels, profile &amp; cabin verified before sign-off.</div>
+        </div>
+      </div>
+    </div>
+    <div class="s-panel">
+      <div class="s-row"><div><h3 class="s-h2">Instant Price &amp; Process Builder</h3><p class="s-small">See your baseline before entering your name or phone.</p></div><span class="s-mono" style="font-size:.7rem">NO FORM WALL</span></div>
+      <span class="s-label">1. Select Vehicle Size</span>
+      <div class="s-pills" data-r="sizes">
+        <button type="button" class="s-btn" data-size="coupe">Coupe / 2-Door<span>Tier 1</span></button>
+        <button type="button" class="s-btn on" data-size="sedan">Sedan / Compact<span>Most Popular</span></button>
+        <button type="button" class="s-btn" data-size="midsuv">Mid-Size SUV<span>2-Row Crossover</span></button>
+        <button type="button" class="s-btn" data-size="largesuv">Large SUV / Truck<span>3-Row / Full-Size</span></button>
+      </div>
+      <span class="s-label">2. Select Service</span>
+      <div class="s-pills" data-r="pkgs">
+        <button type="button" class="s-btn on" data-pkg="silver_full">Silver Full Detail<span>Inside + Out Reset</span></button>
+        <button type="button" class="s-btn" data-pkg="gold_full">Gold Full Detail<span>Deep Interior + Clay/Seal</span></button>
+        <button type="button" class="s-btn" data-pkg="ceramic">System X Ceramic<span>5-Yr Protection + Polish</span></button>
+        <button type="button" class="s-btn" data-pkg="shine_club">The Shine Club<span>Recurring Monthly Care</span></button>
+      </div>
+      <div class="s-receipt">
+        <div class="s-row"><div><div class="s-title" data-r="title">SEDAN // SILVER FULL DETAIL</div><div class="s-price" data-r="price">$250</div></div><span class="s-badge" data-r="badge">INSTANT SQUARE SLOT</span></div>
+        <p class="s-expl" data-r="expl">✓ Standard Full Detail: book straight into Square.</p>
+        <a class="s-cta" data-r="sms" href="sms:+17576899821?&amp;body=Hi%20Shine%20My%20Ride%20757%2C%20I%27d%20like%20to%20book%20a%20Sedan%20Silver%20Full%20Detail%20(%24250%20baseline).">Lock In My Price via SMS (757-689-9821) →</a>
+        <a class="s-cta2" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">Or Book Directly in Square Appointments</a>
+        <p class="s-disc">*Prices shown are baseline estimates and may change based on vehicle condition, size, and location. Final dates confirmed in writing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('smr27'); if(!root) return;
+  function q(n){return root.querySelector('[data-r="'+n+'"]');}
+  var M={
+    silver_full:{label:'SILVER FULL DETAIL',p:{coupe:230,sedan:250,midsuv:290,largesuv:350},badge:'INSTANT SQUARE SLOT',note:'✓ Standard Full Detail: book straight into Square.'},
+    gold_full:{label:'GOLD FULL DETAIL',p:{coupe:450,sedan:525,midsuv:600,largesuv:675},badge:'INSTANT SQUARE SLOT',note:'✓ Deep Interior + Exterior Clay & Sealant, with 4-corner arrival & 5-photo QA receipt.'},
+    ceramic:{label:'SYSTEM X 5-YR CERAMIC',p:{coupe:1400,sedan:1500,midsuv:1650,largesuv:1850},badge:'3-PHOTO OPTICAL GATE',note:'⚡ Text 3 sunlit paint photos so we dial in the exact polish stage.'},
+    shine_club:{label:'THE SHINE CLUB MEMBERSHIP',p:{coupe:149,sedan:149,midsuv:149,largesuv:149},badge:'MONTHLY RECURRING',note:'★ Priority recurring care ($149/mo standard | $99/mo founding rate, locked while you stay a member).'}
+  };
+  var size='sedan',pkg='silver_full';
+  var s=q('slider');
+  s.addEventListener('input',function(){var v=+s.value;q('swirl').style.clipPath='inset(0 '+(100-v)+'% 0 0)';q('tape').style.left=v+'%';q('readout').textContent=v+'% SWIRLS / '+(100-v)+'% SYSTEM X CERAMIC';});
+  function render(){var o=M[pkg],pr=o.p[size],sz=size.toUpperCase();
+    q('title').textContent=sz+' // '+o.label;q('price').textContent=pkg==='shine_club'?'$'+pr+'/mo':'$'+pr;q('badge').textContent=o.badge;q('expl').textContent=o.note;
+    var b=pkg==='ceramic'?'Hi Shine My Ride 757, I want to lock in a '+sz+' '+o.label+' ($'+pr+' baseline). Ready to send my 3 sunlit paint photos!':"Hi Shine My Ride 757, I'd like to schedule a "+sz+' '+o.label+' ($'+pr+(pkg==='shine_club'?'/mo':'')+' baseline).';
+    q('sms').href='sms:+17576899821?&body='+encodeURIComponent(b);}
+  function bind(n,attr,set){var g=q(n);g.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;g.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});t.classList.add('on');set(t.getAttribute(attr));render();});}
+  bind('sizes','data-size',function(v){size=v;});bind('pkgs','data-pkg',function(v){pkg=v;});
+})();
+</script>
