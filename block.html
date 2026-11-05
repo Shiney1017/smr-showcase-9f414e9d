@@ -1,133 +1,318 @@
-<!-- SMR 757 — 2027 Tactile Proof Upgrade (Squarespace Code Block). STAGED 2026-11-04. All CSS scoped under .smr27. No AI video; CSS textures only. Prices = live Square. -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Caveat:wght@700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<!-- SMR Instant Price & Process Builder: Squarespace code block (generated 2026-11-04 21:25) -->
 <style>
-.smr27{--ob:#070C15;--nv:#101B2B;--ab:#1575D4;--sky:#75C9FF;--gold:#F5A623;--em:#10B981;--tx:#F8FAFC;--mu:#94A3B8;
-  position:relative;max-width:1180px;margin:0 auto;padding:28px 18px 48px;color:var(--tx);font-family:'Inter',sans-serif;line-height:1.5;border-radius:18px;
-  background-color:#0A111C;
-  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),repeating-linear-gradient(0deg,rgba(255,255,255,.01) 0 1px,transparent 1px 4px);}
-.smr27 *{box-sizing:border-box;margin:0;padding:0}
-.smr27 .s-strip{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;background:rgba(16,27,43,.9);border:1px solid rgba(117,201,255,.22);border-radius:12px;margin-bottom:26px}
-.smr27 .s-mono{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);display:flex;align-items:center;gap:8px}
-.smr27 .s-dot{width:8px;height:8px;background:var(--em);border-radius:50%;box-shadow:0 0 10px var(--em)}
-.smr27 .s-pill{background:rgba(245,166,35,.14);border:1px solid rgba(245,166,35,.45);color:#FDE68A;font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:999px}
-.smr27 .s-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:30px;align-items:start}
-@media (max-width:920px){.smr27 .s-grid{grid-template-columns:1fr}}
-.smr27 .s-eyebrow{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.76rem;color:var(--gold);border-left:3px solid var(--gold);padding-left:10px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
-.smr27 .s-h1{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;line-height:1.08;letter-spacing:-.025em;margin-bottom:16px;color:var(--tx)}
-.smr27 .s-caveat{font-family:'Caveat',cursive;font-size:1.2em;color:var(--sky);display:inline-block;transform:rotate(-1deg)}
-.smr27 .s-sub{color:var(--mu);font-size:1.02rem;margin-bottom:22px;max-width:580px}
-.smr27 .s-card{background:var(--nv);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px;box-shadow:0 24px 48px rgba(0,0,0,.55)}
-.smr27 .s-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--mu)}
-.smr27 .s-hood{position:relative;height:300px;border-radius:12px;overflow:hidden;user-select:none;border:1px solid rgba(117,201,255,.25)}
-/* corrected: deep mirror clearcoat + halogen beam reflection + hydrophobic beads */
-.smr27 .s-fixed{position:absolute;inset:0;z-index:0;background-color:#05080f;
-  background-image:radial-gradient(circle at 22% 30%,rgba(255,255,255,.55) 0 3px,rgba(117,201,255,.25) 4px,transparent 7px),radial-gradient(circle at 63% 58%,rgba(255,255,255,.5) 0 4px,rgba(117,201,255,.22) 5px,transparent 9px),radial-gradient(circle at 80% 22%,rgba(255,255,255,.5) 0 2px,transparent 5px),radial-gradient(circle at 41% 78%,rgba(255,255,255,.45) 0 3px,transparent 6px),radial-gradient(circle at 88% 74%,rgba(255,255,255,.45) 0 2px,transparent 5px),radial-gradient(circle at 52% 40%,rgba(255,247,220,.55),rgba(255,247,220,.08) 9%,transparent 22%),linear-gradient(160deg,#0b1424,#05080f 60%)}
-/* swirled: cobweb rings around halogen hotspot */
-.smr27 .s-swirl{position:absolute;inset:0;z-index:1;clip-path:inset(0 50% 0 0);background-color:#161C26;
-  background-image:radial-gradient(circle at 52% 40%,rgba(255,247,220,.5),transparent 14%),repeating-radial-gradient(circle at 52% 40%,rgba(255,255,255,.10) 0 1px,transparent 2px 7px),linear-gradient(160deg,#1d2533,#0f141c)}
-.smr27 .s-tape{position:absolute;top:0;bottom:0;left:50%;width:16px;transform:translateX(-50%);z-index:2;display:flex;align-items:center;justify-content:center;box-shadow:0 0 16px rgba(0,0,0,.85);
-  background-color:#2F6FD8;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.08) 0 1px,transparent 1px 3px)}
-.smr27 .s-tape::after{content:"3M TAPE 50/50 SPLIT";writing-mode:vertical-rl;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.92)}
-.smr27 .s-note{position:absolute;z-index:3;font-family:'Caveat',cursive;font-size:1.25rem;font-weight:700;pointer-events:none;padding:4px 10px;border-radius:6px}
-.smr27 .s-nl{top:14px;left:14px;color:#FCA5A5;background:rgba(15,23,42,.78);border:1px dashed rgba(248,113,113,.5);transform:rotate(-2deg)}
-.smr27 .s-nr{bottom:14px;right:14px;color:#6EE7B7;background:rgba(15,23,42,.82);border:1px solid rgba(16,185,129,.5);transform:rotate(1.5deg)}
-.smr27 .s-ctl{margin-top:14px;display:flex;align-items:center;gap:12px;font-size:.78rem;color:var(--mu)}
-.smr27 .s-ctl input{flex:1;accent-color:var(--ab);cursor:pointer}
-.smr27 .s-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-@media (max-width:560px){.smr27 .s-steps{grid-template-columns:1fr}}
-.smr27 .s-step{background:rgba(7,12,21,.75);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;font-size:.76rem;color:var(--tx)}
-.smr27 .s-step strong{display:block;font-family:'JetBrains Mono',monospace;color:var(--sky);margin-bottom:2px}
-/* brushed Alclad aluminum panel */
-.smr27 .s-panel{border:1px solid rgba(21,117,212,.4);border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.6);background-color:#101B2B;
-  background-image:repeating-linear-gradient(90deg,rgba(200,215,230,.035) 0 1px,transparent 1px 2px,rgba(200,215,230,.02) 2px 3px,transparent 3px 5px)}
-.smr27 .s-h2{font-size:1.25rem;font-weight:800;color:var(--tx)}
-.smr27 .s-small{font-size:.8rem;color:var(--mu)}
-.smr27 .s-label{font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;color:var(--mu);margin:14px 0 8px;display:block}
-.smr27 .s-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.smr27 .s-btn{background:rgba(7,12,21,.7);border:1px solid rgba(255,255,255,.12);color:var(--tx);padding:11px 12px;border-radius:10px;font:600 .85rem 'Inter',sans-serif;cursor:pointer;text-align:left}
-.smr27 .s-btn.on{background:rgba(21,117,212,.22);border-color:var(--sky);box-shadow:0 0 0 1px var(--sky)}
-.smr27 .s-btn span{display:block;font-size:.72rem;color:var(--mu);font-weight:400}
-.smr27 .s-receipt{margin-top:18px;background:#070C15;border:1px dashed rgba(117,201,255,.35);border-radius:14px;padding:16px}
-.smr27 .s-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.smr27 .s-title{font-size:.75rem;color:var(--mu);text-transform:uppercase;font-family:'JetBrains Mono',monospace}
-.smr27 .s-price{font-size:2.1rem;font-weight:800;color:#fff}
-.smr27 .s-badge{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:4px 8px;border-radius:6px;background:rgba(16,185,129,.15);color:#6EE7B7}
-.smr27 .s-expl{font-size:.8rem;color:var(--sky);margin-top:6px}
-.smr27 a.s-cta{display:block;width:100%;margin-top:14px;padding:15px 18px;border-radius:12px;background:#1575D4;color:#fff;font-size:.98rem;font-weight:700;text-align:center;text-decoration:none;box-shadow:0 10px 24px rgba(21,117,212,.4)}
-.smr27 a.s-cta2{display:block;width:100%;margin-top:10px;padding:12px;border-radius:10px;border:1px solid rgba(245,166,35,.45);background:rgba(245,166,35,.08);color:#FDE68A;font-size:.84rem;font-weight:600;text-align:center;text-decoration:none}
-.smr27 .s-disc{margin-top:10px;font-size:.72rem;color:var(--mu);line-height:1.4}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+.smr-builder{--bg-obsidian: #070C15;
+    --bg-navy: #101B2B;
+    --action-blue: #1575D4;
+    --sky-accent: #75C9FF;
+    --gold-luxe: #F5A623;
+    --emerald-qa: #10B981;
+    --tape-blue: #2563EB;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;background-color: var(--bg-obsidian);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;}
+.smr-builder *{box-sizing: border-box; margin: 0; padding: 0;}
+.smr-builder .tactile-wrapper{position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(21, 117, 212, 0.18), transparent 45%),
+      radial-gradient(circle at 85% 75%, rgba(245, 166, 35, 0.10), transparent 40%),
+      linear-gradient(180deg, #070C15 0%, #0D1624 100%);}
+.smr-builder .top-trust-strip{display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(16, 27, 43, 0.85);
+    border: 1px solid rgba(117, 201, 255, 0.22);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(10px);}
+.smr-builder .mono-stamp{font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sky-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;}
+.smr-builder .live-dot{width: 8px; height: 8px;
+    background: var(--emerald-qa);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--emerald-qa);}
+.smr-builder .verified-pill{background: rgba(245, 166, 35, 0.14);
+    border: 1px solid rgba(245, 166, 35, 0.45);
+    color: #FDE68A;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;}
+.smr-builder .hero-grid{display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 32px;
+    align-items: start;}
+.smr-builder .eyebrow-tag{display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--gold-luxe);
+    border-left: 3px solid var(--gold-luxe);
+    padding-left: 10px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;}
+.smr-builder h1.hero-title{font-size: clamp(2.1rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;}
+.smr-builder .chalk-underline{font-family: 'Caveat', cursive;
+    font-size: 1.22em;
+    color: var(--sky-accent);
+    font-weight: 700;
+    display: inline-block;
+    transform: rotate(-1deg);}
+.smr-builder .hero-sub{color: var(--text-muted);
+    font-size: 1.03rem;
+    margin-bottom: 24px;
+    max-width: 580px;}
+.smr-builder .inspection-card{background: var(--bg-navy);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+    position: relative;}
+.smr-builder .inspection-header{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);}
+.smr-builder .hood-viewport{position: relative;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    user-select: none;
+    background: #05080f;
+    border: 1px solid rgba(117, 201, 255, 0.25);}
+.smr-builder .layer-corrected{position: absolute;
+    inset: 0;
+    background: #05080f;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 16px;z-index:0;}
+.smr-builder .layer-swirled{position: absolute;
+    inset: 0;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
+    background: #161C26;z-index:1;}
+.smr-builder .painters-tape-divider{position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 14px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #1D4ED8, #3B82F6, #1E40AF);
+    box-shadow: 0 0 16px rgba(0,0,0,0.85);
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;z-index:2;}
+.smr-builder .painters-tape-divider::after{content: "3M TAPE 50/50 SPLIT";
+    writing-mode: vertical-rl;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.9);}
+.smr-builder .tech-wax-note{position: absolute;
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+    font-weight: 700;
+    pointer-events: none;
+    padding: 4px 10px;
+    border-radius: 6px;z-index:3;}
+.smr-builder .note-left{top: 16px; left: 14px;
+    color: #FCA5A5;
+    background: rgba(15, 23, 42, 0.78);
+    border: 1px dashed rgba(248, 113, 113, 0.5);
+    transform: rotate(-2deg);}
+.smr-builder .note-right{bottom: 16px; right: 14px;
+    color: #6EE7B7;
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    transform: rotate(1.5deg);}
+.smr-builder .slider-control-bar{margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;}
+.smr-builder .slider-control-bar input[type="range"]{flex: 1;
+    accent-color: var(--action-blue);
+    cursor: pointer;}
+.smr-builder .process-strip{display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 14px;}
+.smr-builder .process-Step{background: rgba(7, 12, 21, 0.75);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.76rem;}
+.smr-builder .process-Step strong{display: block;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--sky-accent);
+    margin-bottom: 2px;}
+.smr-builder .estimator-panel{background: linear-gradient(165deg, #101B2B 0%, #0A121E 100%);
+    border: 1px solid rgba(21, 117, 212, 0.4);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);}
+.smr-builder .panel-header{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;}
+.smr-builder .step-label{font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 14px 0 8px;
+    display: block;}
+.smr-builder .pill-grid{display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;}
+.smr-builder .select-pill{background: rgba(7, 12, 21, 0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text-main);
+    padding: 11px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s ease;}
+.smr-builder .select-pill.active{background: rgba(21, 117, 212, 0.22);
+    border-color: var(--sky-accent);
+    box-shadow: 0 0 0 1px var(--sky-accent);}
+.smr-builder .select-pill span{display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 400;}
+.smr-builder .quote-receipt-box{margin-top: 18px;
+    background: #070C15;
+    border: 1px dashed rgba(117, 201, 255, 0.35);
+    border-radius: 14px;
+    padding: 16px;}
+.smr-builder .presenter-wrap{margin: 14px 0;}
+.smr-builder .presenter-video{width: 100%; max-width: 360px; aspect-ratio: 1/1; border-radius: 12px; background:#000; display:block;}
+.smr-builder .presenter-video[hidden]{display:none;}
+.smr-builder .presenter-cap{font-size:0.72rem; color:var(--text-muted); margin-top:4px;}
+.smr-builder .price-row{display: flex;
+    justify-content: space-between;
+    align-items: baseline;}
+.smr-builder .price-big{font-size: 2.1rem;
+    font-weight: 800;
+    color: #FFFFFF;}
+.smr-builder .gate-badge{font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #6EE7B7;}
+.smr-builder .cta-primary{display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #1575D4, #2563EB);
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(21, 117, 212, 0.4);}
+.smr-builder .cta-secondary{display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(245, 166, 35, 0.45);
+    background: rgba(245, 166, 35, 0.08);
+    color: #FDE68A;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;}
+.smr-builder .disclaimer{margin-top: 10px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.4;}
+.smr-builder .layer-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none;}
+.smr-builder .layer-corrected > *:not(video){position:relative;}
+.smr-builder .spec-reel{max-width:1200px; margin:28px auto 8px; padding:0 20px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+.smr-builder .spec-tile{position:relative; border-radius:12px; overflow:hidden; aspect-ratio:16/10; border:1px solid rgba(117,201,255,0.18); background:#101B2B;}
+.smr-builder .spec-tile video{width:100%; height:100%; object-fit:cover; display:block;}
+.smr-builder .spec-tile span{position:absolute; left:10px; bottom:8px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#fff; background:rgba(7,12,21,0.7); padding:3px 8px; border-radius:6px;}
+.smr-builder .builder-only{width:100%;max-width:560px;margin:40px auto;padding:0 16px;}
+.smr-builder .sel{width:100%;padding:12px;border-radius:10px;background:#070C15;color:#F8FAFC;border:1px solid rgba(255,255,255,.18);font:600 .9rem Inter,sans-serif;box-sizing:border-box}
+.smr-builder .tabs{display:flex;flex-wrap:wrap;gap:6px}
+.smr-builder .tabs .select-pill{padding:8px 10px;font-size:.78rem}
+@media (max-width: 920px){.smr-builder .hero-grid{grid-template-columns: 1fr;}}
+@media (max-width:820px){.smr-builder .spec-reel{grid-template-columns:repeat(2,1fr);}}
+@media (prefers-reduced-motion: reduce){.smr-builder .layer-video,.smr-builder .spec-tile video{animation:none;}}
+
+.smr-builder{box-sizing:border-box;font-family:'Inter',sans-serif;background:#070C15;color:#F8FAFC;line-height:1.5;width:100vw;position:relative;left:50%;margin-left:-50vw;padding:40px 0;border-radius:0;overflow-x:hidden;display:block;min-height:0;align-items:stretch;justify-content:flex-start}
+.smr-builder *,.smr-builder *::before,.smr-builder *::after{box-sizing:border-box}
+.smr-builder .smrb-inner{max-width:1100px;width:100%;margin:0 auto;padding:0 16px;box-sizing:border-box}
+.smr-builder .smrb-section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;text-align:center;margin:0 0 20px;color:#F8FAFC}
+.smr-builder .builder-only{width:100%;max-width:100%;margin:0 auto;padding:0}
+.smr-builder .estimator-panel{max-width:100%}
+@media (max-width:600px){.smr-builder{padding:28px 0}.smr-builder .smrb-inner{padding:0 12px}.smr-builder .estimator-panel{padding:16px}.smr-builder .price-big{font-size:1.7rem}}
+
 </style>
-<div class="smr27" id="smr27">
-  <div class="s-strip">
-    <div class="s-mono"><span class="s-dot"></span>SHINE MY RIDE 757 // HAMPTON ROADS (757-689-9821)</div>
-    <div class="s-pill">★ 4.9 stars from 307+ Google reviews • System X Partner</div>
-  </div>
-  <div class="s-grid">
-    <div>
-      <span class="s-eyebrow">Veteran-Owned • Automotive • Marine • Aviation</span>
-      <h2 class="s-h1">We Don’t Hide Behind Stock Photos. <span class="s-caveat">Inspect the 50/50 Tape Line.</span></h2>
-      <p class="s-sub">Drag the 3M painter's tape across the hood to see how our halogen swirl-finder inspection and System X ceramic process transforms tunnel-washed clearcoat, backed by 4-corner arrival documentation and 5-photo completion QA.</p>
-      <div class="s-card">
-        <div class="s-head"><span>OPTICAL INSPECTION // HALOGEN BEAM</span><span data-r="readout">50% SWIRLS / 50% SYSTEM X CERAMIC</span></div>
-        <div class="s-hood">
-          <div class="s-fixed" aria-hidden="true"></div>
-          <div class="s-swirl" data-r="swirl" aria-hidden="true"></div>
-          <div class="s-tape" data-r="tape"></div>
-          <div class="s-note s-nl">← Tunnel-wash cobweb swirls (Unprotected)</div>
-          <div class="s-note s-nr">2-Step Polish + System X Ceramic (&gt;110° Bead) →</div>
-        </div>
-        <div class="s-ctl"><span>Drag 3M Tape:</span><input type="range" data-r="slider" min="8" max="92" value="50" aria-label="Tape position"></div>
-        <div class="s-steps">
-          <div class="s-step"><strong>01 // ARRIVAL LOCK</strong>4-corner pre-inspection photos before a mitt touches your paint.</div>
-          <div class="s-step"><strong>02 // DECON + CORRECT</strong>pH-neutral decontamination + machine correction.</div>
-          <div class="s-step"><strong>03 // 5-PHOTO QA</strong>Hood, roof, wheels, profile &amp; cabin verified before sign-off.</div>
-        </div>
-      </div>
-    </div>
-    <div class="s-panel">
-      <div class="s-row"><div><h3 class="s-h2">Instant Price &amp; Process Builder</h3><p class="s-small">See your baseline before entering your name or phone.</p></div><span class="s-mono" style="font-size:.7rem">NO FORM WALL</span></div>
-      <span class="s-label">1. Select Vehicle Size</span>
-      <div class="s-pills" data-r="sizes">
-        <button type="button" class="s-btn" data-size="coupe">Coupe / 2-Door<span>Tier 1</span></button>
-        <button type="button" class="s-btn on" data-size="sedan">Sedan / Compact<span>Most Popular</span></button>
-        <button type="button" class="s-btn" data-size="midsuv">Mid-Size SUV<span>2-Row Crossover</span></button>
-        <button type="button" class="s-btn" data-size="largesuv">Large SUV / Truck<span>3-Row / Full-Size</span></button>
-      </div>
-      <span class="s-label">2. Select Service</span>
-      <div class="s-pills" data-r="pkgs">
-        <button type="button" class="s-btn on" data-pkg="silver_full">Silver Full Detail<span>Inside + Out Reset</span></button>
-        <button type="button" class="s-btn" data-pkg="gold_full">Gold Full Detail<span>Deep Interior + Clay/Seal</span></button>
-        <button type="button" class="s-btn" data-pkg="ceramic">System X Ceramic<span>5-Yr Protection + Polish</span></button>
-        <button type="button" class="s-btn" data-pkg="shine_club">The Shine Club<span>Recurring Monthly Care</span></button>
-      </div>
-      <div class="s-receipt">
-        <div class="s-row"><div><div class="s-title" data-r="title">SEDAN // SILVER FULL DETAIL</div><div class="s-price" data-r="price">$250</div></div><span class="s-badge" data-r="badge">INSTANT SQUARE SLOT</span></div>
-        <p class="s-expl" data-r="expl">✓ Standard Full Detail: book straight into Square.</p>
-        <a class="s-cta" data-r="sms" href="sms:+17576899821?&amp;body=Hi%20Shine%20My%20Ride%20757%2C%20I%27d%20like%20to%20book%20a%20Sedan%20Silver%20Full%20Detail%20(%24250%20baseline).">Lock In My Price via SMS (757-689-9821) →</a>
-        <a class="s-cta2" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">Or Book Directly in Square Appointments</a>
-        <p class="s-disc">*Prices shown are baseline estimates and may change based on vehicle condition, size, and location. Final dates confirmed in writing.</p>
-      </div>
-    </div>
-  </div>
+<section class="smr-builder" id="instant-price-builder" aria-label="Instant Price and Process Builder">
+<div class="smrb-inner">
+<h2 class="smrb-section-title">Instant Price &amp; Process Builder</h2>
+<div class="builder-only"><div class="estimator-panel">
+<div class="panel-header"><div><h2 class="smrb-h" style="font-size:1.25rem;font-weight:800;">Instant Price &amp; Process Builder</h2>
+<p style="font-size:0.8rem;color:var(--text-muted);">Every service on our Square menu. See your price before entering your name or phone.</p></div>
+<span class="mono-stamp" style="font-size:0.7rem;">NO FORM WALL</span></div>
+<label class="step-label">1. Category</label><div class="tabs" id="smrb-tabs"></div>
+<label class="step-label">2. Service</label><select class="sel" id="smrb-svc"></select>
+<label class="step-label">3. Size / Option</label><select class="sel" id="smrb-var"></select>
+<div class="quote-receipt-box"><div class="price-row"><div>
+<div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-family:'JetBrains Mono',monospace;" id="smrb-title"></div>
+<div class="price-big" id="smrb-price"></div></div><span class="gate-badge" id="smrb-badge"></span></div>
+<a id="smrb-sms" class="cta-primary" href="#">Lock In My Price via SMS (757-689-9821) →</a>
+<a id="smrb-sq" class="cta-secondary" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">Or Book Directly in Square Appointments</a>
+<p class="disclaimer">*Prices shown are baseline estimates and are subject to change based on final vehicle condition, size, and location. Final calendar dates confirmed upon written scheduling review.</p>
+</div></div></div>
 </div>
+</section>
 <script>
 (function(){
-  var root=document.getElementById('smr27'); if(!root) return;
-  function q(n){return root.querySelector('[data-r="'+n+'"]');}
-  var M={
-    silver_full:{label:'SILVER FULL DETAIL',p:{coupe:230,sedan:250,midsuv:290,largesuv:350},badge:'INSTANT SQUARE SLOT',note:'✓ Standard Full Detail: book straight into Square.'},
-    gold_full:{label:'GOLD FULL DETAIL',p:{coupe:450,sedan:525,midsuv:600,largesuv:675},badge:'INSTANT SQUARE SLOT',note:'✓ Deep Interior + Exterior Clay & Sealant, with 4-corner arrival & 5-photo QA receipt.'},
-    ceramic:{label:'SYSTEM X 5-YR CERAMIC',p:{coupe:1400,sedan:1500,midsuv:1650,largesuv:1850},badge:'3-PHOTO OPTICAL GATE',note:'⚡ Text 3 sunlit paint photos so we dial in the exact polish stage.'},
-    shine_club:{label:'THE SHINE CLUB MEMBERSHIP',p:{coupe:149,sedan:149,midsuv:149,largesuv:149},badge:'MONTHLY RECURRING',note:'★ Priority recurring care ($149/mo standard | $99/mo founding rate, locked while you stay a member).'}
-  };
-  var size='sedan',pkg='silver_full';
-  var s=q('slider');
-  s.addEventListener('input',function(){var v=+s.value;q('swirl').style.clipPath='inset(0 '+(100-v)+'% 0 0)';q('tape').style.left=v+'%';q('readout').textContent=v+'% SWIRLS / '+(100-v)+'% SYSTEM X CERAMIC';});
-  function render(){var o=M[pkg],pr=o.p[size],sz=size.toUpperCase();
-    q('title').textContent=sz+' // '+o.label;q('price').textContent=pkg==='shine_club'?'$'+pr+'/mo':'$'+pr;q('badge').textContent=o.badge;q('expl').textContent=o.note;
-    var b=pkg==='ceramic'?'Hi Shine My Ride 757, I want to lock in a '+sz+' '+o.label+' ($'+pr+' baseline). Ready to send my 3 sunlit paint photos!':"Hi Shine My Ride 757, I'd like to schedule a "+sz+' '+o.label+' ($'+pr+(pkg==='shine_club'?'/mo':'')+' baseline).';
-    q('sms').href='sms:+17576899821?&body='+encodeURIComponent(b);}
-  function bind(n,attr,set){var g=q(n);g.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;g.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});t.classList.add('on');set(t.getAttribute(attr));render();});}
-  bind('sizes','data-size',function(v){size=v;});bind('pkgs','data-pkg',function(v){pkg=v;});
+if(!document.getElementById('smrb-tabs'))return;
+const D=[{"category": "Full Service Detail", "services": [{"name": "Silver Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 23000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 25000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 29000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 35000, "label": null, "suffix": ""}]}, {"name": "Gold Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 45000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 52500, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 60000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 67500, "label": null, "suffix": ""}]}, {"name": "Platinum Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 70000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 80000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 90000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 100000, "label": null, "suffix": ""}]}, {"name": "Silver Motorcycle Detail", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 17500, "label": null, "suffix": ""}, {"name": "Touring / Bagger", "cents": 23500, "label": null, "suffix": ""}]}, {"name": "Gold Motorcycle Detail", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 29500, "label": null, "suffix": ""}, {"name": "Touring / Bagger", "cents": 39500, "label": null, "suffix": ""}]}, {"name": "Platinum Motorcycle Ceramic", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 69500, "label": null, "suffix": ""}, {"name": "Touring / Bagger", "cents": 89500, "label": null, "suffix": ""}]}]}, {"category": "Interior Only", "services": [{"name": "Silver Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 21700, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 25000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 29000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 33500, "label": null, "suffix": ""}]}, {"name": "Gold Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 30000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 35000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 40000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 47500, "label": null, "suffix": ""}]}, {"name": "Platinum Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 50000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 55000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 57500, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 60000, "label": null, "suffix": ""}]}]}, {"category": "Exterior Only", "services": [{"name": "Silver Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 21700, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 30000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 35000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 37500, "label": null, "suffix": ""}]}, {"name": "Gold Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 45000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 50000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 57500, "label": null, "suffix": ""}, {"name": "Large SUV/Crossover", "cents": 62500, "label": null, "suffix": ""}]}, {"name": "Platinum Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 70000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 75000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 80000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 85000, "label": null, "suffix": ""}]}]}, {"category": "Ceramic Coating", "services": [{"name": "Silver Ceramic Coating Package (5 Year Shield)", "monthly": false, "variations": [{"name": "Coupe", "cents": 140000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 150000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 165000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 185000, "label": null, "suffix": ""}]}, {"name": "Gold Ceramic Coating Package (10 Year Armor)", "monthly": false, "variations": [{"name": "Coupe", "cents": 180000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 200000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 220000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 240000, "label": null, "suffix": ""}]}, {"name": "Platinum Ceramic Coating Package", "monthly": false, "variations": [{"name": "Coupe", "cents": 280000, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 300000, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 320000, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 340000, "label": null, "suffix": ""}]}]}, {"category": "Paint Correction", "services": [{"name": "Paint Correction", "monthly": false, "variations": [{"name": "1-Step Correction - $450-$600 (starting at)", "cents": 45000, "label": null, "suffix": ""}, {"name": "2-Step Correction - $800-$1,050 (starting at)", "cents": 80000, "label": null, "suffix": ""}, {"name": "3-Step Correction - starting at", "cents": 125000, "label": null, "suffix": ""}, {"name": "2-Step Add-On with Ceramic Coating", "cents": 55000, "label": null, "suffix": ""}]}]}, {"category": "Military PCS Package", "services": [{"name": "PCS Ready Package", "monthly": false, "variations": [{"name": "Coupe", "cents": 34900, "label": null, "suffix": ""}, {"name": "Sedan", "cents": 37900, "label": null, "suffix": ""}, {"name": "Mini SUV/Crossover", "cents": 42900, "label": null, "suffix": ""}, {"name": "Large SUV/Truck", "cents": 47900, "label": null, "suffix": ""}]}]}, {"category": "Add On", "services": [{"name": "Headlight Restoration", "monthly": false, "variations": [{"name": "Regular", "cents": 9000, "label": null, "suffix": ""}]}, {"name": "Motorcycle Chrome & Metal Polish (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 7500, "label": null, "suffix": ""}]}, {"name": "Motorcycle Engine Degrease (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 5000, "label": null, "suffix": ""}]}, {"name": "Motorcycle Leather Conditioning (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 4000, "label": null, "suffix": ""}]}, {"name": "Motorcycle Heavy Soil (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 5000, "label": null, "suffix": ""}]}]}, {"category": "Shine Club", "services": [{"name": "Members Only - Maintenance", "monthly": false, "variations": [{"name": "Weekly", "cents": 9500, "label": null, "suffix": ""}, {"name": "Quarterly", "cents": 22500, "label": null, "suffix": ""}]}, {"name": "Shine Club: Basic Membership", "monthly": true, "variations": [{"name": "Founder: $99/mo, locked while you stay a member", "cents": 9900, "label": null, "suffix": ""}, {"name": "Member: $149/mo", "cents": 14900, "label": null, "suffix": ""}]}, {"name": "Shine Club: Premium Membership", "monthly": true, "variations": [{"name": "Regular", "cents": 10900, "label": null, "suffix": ""}]}, {"name": "Shine Club: Elite Membership", "monthly": true, "variations": [{"name": "Regular", "cents": 16900, "label": null, "suffix": ""}]}]}, {"category": "Aircraft & Fleet", "services": [{"name": "Aircraft Detailing", "monthly": false, "variations": [{"name": "Regular", "cents": 0, "label": "Custom quote", "suffix": ""}]}, {"name": "SUV/TRUCK/VAN Fleet", "monthly": false, "variations": [{"name": "Regular", "cents": 16000, "label": "Custom quote", "suffix": ""}]}]}, {"category": "Other Services", "services": [{"name": "Water Extraction", "monthly": false, "variations": [{"name": "Regular", "cents": 40000, "label": null, "suffix": ""}]}]}, {"category": "Tint & PPF", "services": [{"name": "Window Tinting", "monthly": false, "variations": [{"name": "Front Two Windows - Standard Ceramic", "cents": 24900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Front Two Windows - Nano", "cents": 34900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "All Sides + Rear - Standard Ceramic", "cents": 49900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "All Sides + Rear - Nano", "cents": 74900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Windshield - Standard Ceramic", "cents": 29900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Windshield - Nano", "cents": 39900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Windshield Strip - Standard Ceramic", "cents": 9900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Windshield Strip - Nano", "cents": 14900, "label": "Waitlist \u2014 January 2027", "suffix": ""}]}, {"name": "Paint Protection Film (PPF)", "monthly": false, "variations": [{"name": "Partial Front - starting at", "cents": 139900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Full Front - starting at", "cents": 229900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Track - starting at", "cents": 339900, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Full Body - starting at", "cents": 650000, "label": "Waitlist \u2014 January 2027", "suffix": ""}, {"name": "Windshield Film - starting at", "cents": 45000, "label": "Waitlist \u2014 January 2027", "suffix": ""}]}]}, {"category": "RV & Boat", "services": [{"name": "RV&Boat: Complete Exterior Wash & Wax", "monthly": false, "variations": [{"name": "Regular $", "cents": 1900, "label": null, "suffix": "/ft"}, {"name": "Per ft. with fly bridge", "cents": 2100, "label": null, "suffix": "/ft"}]}, {"name": "RV&Boat: Wash & Wax Topside", "monthly": false, "variations": [{"name": "Wash&Wax Topside", "cents": 1450, "label": null, "suffix": ""}, {"name": "Wash & Wash w/ Fly Bridge", "cents": 1450, "label": null, "suffix": ""}, {"name": "Interior Shampoo & Detail", "cents": 5500, "label": null, "suffix": ""}]}, {"name": "RV/Motorhome Detail (Wash/Wax)", "monthly": false, "variations": [{"name": "Regular", "cents": 92000, "label": null, "suffix": ""}]}, {"name": "RV Full Exterior Package", "monthly": false, "variations": [{"name": "Regular", "cents": 78200, "label": null, "suffix": ""}]}, {"name": "Platinum Restoration (Boat)", "monthly": false, "variations": [{"name": "Regular", "cents": 1050000, "label": null, "suffix": ""}]}]}];let ci=0;
+const $=id=>document.getElementById('smrb-'+id);
+function money(c){return '$'+(c/100).toLocaleString('en-US',{minimumFractionDigits:c%100?2:0})}
+function tabs(){$('tabs').innerHTML='';D.forEach((c,i)=>{const b=document.createElement('button');b.className='select-pill'+(i==ci?' active':'');b.textContent=c.category;b.addEventListener('click',()=>{ci=i;tabs();svcs()});$('tabs').appendChild(b)})}
+function svcs(){$('svc').innerHTML=D[ci].services.map((s,i)=>`<option value="${i}">${s.name}</option>`).join('');vars()}
+function vars(){const s=D[ci].services[$('svc').value];$('var').innerHTML=s.variations.map((v,i)=>`<option value="${i}">${v.name}</option>`).join('');$('var').parentNode;render()}
+function render(){const s=D[ci].services[$('svc').value],v=s.variations[$('var').value];
+const suf=v.suffix||(s.monthly?'/mo':'');
+const p=v.label||(money(v.cents)+suf);const wait=(v.label||'').startsWith('Waitlist');
+$('title').textContent=s.name+' // '+v.name;$('price').textContent=p;$('price').style.fontSize=v.label?'1.4rem':'';
+$('badge').textContent=wait?'WAITLIST':(v.label?'CUSTOM QUOTE':'SQUARE PRICE');
+$('sq').style.display=wait?'none':'block';
+const msg=wait?`Hi Shine My Ride 757, please add me to the January 2027 waitlist for ${s.name} (${v.name}).`:`Hi Shine My Ride 757, I'd like to book ${s.name} (${v.name}) - ${p}.`;
+$('sms').href='sms:+17576899821?&body='+encodeURIComponent(msg);$('sms').textContent=wait?'Join the Waitlist via SMS (757-689-9821) →':'Lock In My Price via SMS (757-689-9821) →'}
+$('svc').addEventListener('change',vars);$('var').addEventListener('change',render);tabs();svcs();
 })();
 </script>
