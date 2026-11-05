@@ -375,120 +375,39 @@
   @media (prefers-reduced-motion: reduce){ .layer-video, .spec-tile video { animation:none; } }
   body{min-height:100vh;display:flex;align-items:center;justify-content:center;}
   .builder-only{width:100%;max-width:560px;margin:40px auto;padding:0 16px;}
+.sel{width:100%;padding:12px;border-radius:10px;background:#070C15;color:#F8FAFC;border:1px solid rgba(255,255,255,.18);font:600 .9rem Inter,sans-serif}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}.tabs .select-pill{padding:8px 10px;font-size:.78rem}
+.sel{width:100%;padding:12px;border-radius:10px;background:#070C15;color:#F8FAFC;border:1px solid rgba(255,255,255,.18);font:600 .9rem Inter,sans-serif}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}.tabs .select-pill{padding:8px 10px;font-size:.78rem}
 </style>
-</head>
-<body>
-<main class="builder-only">
-    <div class="estimator-panel">
-      <div class="panel-header">
-        <div>
-          <h2 style="font-size:1.25rem; font-weight:800;">Instant Price &amp; Process Builder</h2>
-          <p style="font-size:0.8rem; color:var(--text-muted);">See your baseline before entering your name or phone.</p>
-        </div>
-        <span class="mono-stamp" style="font-size:0.7rem;">NO FORM WALL</span>
-      </div>
-
-      <label class="step-label">1. Select Vehicle Size Tier</label>
-      <div class="pill-grid" id="sizeGrid">
-        <button class="select-pill" data-size="coupe" onclick="setSize('coupe', this)">Coupe / 2-Door<span>Baseline Tier 1</span></button>
-        <button class="select-pill active" data-size="sedan" onclick="setSize('sedan', this)">Sedan / Compact<span>Most Popular</span></button>
-        <button class="select-pill" data-size="midsuv" onclick="setSize('midsuv', this)">Mid-Size SUV<span>2-Row Crossover</span></button>
-        <button class="select-pill" data-size="largesuv" onclick="setSize('largesuv', this)">Large SUV / Truck<span>3-Row / Full-Size</span></button>
-      </div>
-
-      <label class="step-label">2. Select Protection &amp; Correction Scope</label>
-      <div class="pill-grid" id="pkgGrid">
-        <button class="select-pill active" data-pkg="silver_full" onclick="setPkg('silver_full', this)">Silver Full Detail<span>Inside + Out Reset</span></button>
-        <button class="select-pill" data-pkg="gold_full" onclick="setPkg('gold_full', this)">Gold Full Detail<span>Deep Interior + Clay/Seal</span></button>
-        <button class="select-pill" data-pkg="ceramic_silver" onclick="setPkg('ceramic_silver', this)">System X Ceramic<span>5-Yr Protection + Polish</span></button>
-        <button class="select-pill" data-pkg="shine_club" onclick="setPkg('shine_club', this)">The Shine Club<span>Recurring Monthly Care</span></button>
-      </div>
-      <div class="quote-receipt-box">
-        <div class="price-row">
-          <div>
-            <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; font-family:'JetBrains Mono',monospace;" id="selectedTitle">SEDAN // SILVER FULL DETAIL</div>
-            <div class="price-big" id="priceOutput">$250</div>
-          </div>
-          <span class="gate-badge" id="intakeModeBadge">INSTANT SQUARE SLOT</span>
-        </div>
-        <p style="font-size:0.8rem; color:var(--sky-accent); margin-top:6px;" id="processExplanation">
-          ✓ Standard Full Detail: Bypasses photo underwriting for immediate Square appointment hold.
-        </p>
-
-        <a id="primaryActionBtn" class="cta-primary" href="sms:17576899821?&body=Hi%20Shine%20My%20Ride%20757%2C%20I%27d%20like%20to%20book%20a%20Sedan%20Silver%20Full%20Detail%20(%24250%20baseline).">
-          Lock In My Price via SMS (757-689-9821) →
-        </a>
-        <a class="cta-secondary" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">
-          Or Book Directly in Square Appointments
-        </a>
-        <p class="disclaimer">
-          *Prices shown are baseline estimates and are subject to change based on final vehicle condition, size, and location. Final calendar dates confirmed upon written scheduling review.
-        </p>
-      </div>
-    </div>
-</main>
-
+</head><body><main class="builder-only"><div class="estimator-panel">
+<div class="panel-header"><div><h2 style="font-size:1.25rem;font-weight:800;">Instant Price &amp; Process Builder</h2>
+<p style="font-size:0.8rem;color:var(--text-muted);">Every service on our Square menu. See your price before entering your name or phone.</p></div>
+<span class="mono-stamp" style="font-size:0.7rem;">NO FORM WALL</span></div>
+<label class="step-label">1. Category</label><div class="tabs" id="tabs"></div>
+<label class="step-label">2. Service</label><select class="sel" id="svc"></select>
+<label class="step-label">3. Size / Option</label><select class="sel" id="var"></select>
+<div class="quote-receipt-box"><div class="price-row"><div>
+<div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-family:'JetBrains Mono',monospace;" id="title"></div>
+<div class="price-big" id="price"></div></div><span class="gate-badge" id="badge"></span></div>
+<a id="sms" class="cta-primary" href="#">Lock In My Price via SMS (757-689-9821) →</a>
+<a id="sq" class="cta-secondary" href="https://book.squareup.com/appointments/wh75rtw86875x0/location/LX06E1Q8R55V6/services" target="_blank" rel="noopener">Or Book Directly in Square Appointments</a>
+<p class="disclaimer">*Prices shown are baseline estimates and are subject to change based on final vehicle condition, size, and location. Final calendar dates confirmed upon written scheduling review.</p>
+</div></div></main>
+<script id="square-data" type="application/json">[{"category": "Full Service Detail", "services": [{"name": "Silver Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 23000, "label": null}, {"name": "Sedan", "cents": 25000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 29000, "label": null}, {"name": "Large SUV/Truck", "cents": 35000, "label": null}]}, {"name": "Gold Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 45000, "label": null}, {"name": "Sedan", "cents": 52500, "label": null}, {"name": "Mini SUV/Crossover", "cents": 60000, "label": null}, {"name": "Large SUV/Truck", "cents": 67500, "label": null}]}, {"name": "Platinum Full Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 70000, "label": null}, {"name": "Sedan", "cents": 80000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 90000, "label": null}, {"name": "Large SUV/Truck", "cents": 100000, "label": null}]}, {"name": "Silver Motorcycle Detail", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 17500, "label": null}, {"name": "Touring / Bagger", "cents": 23500, "label": null}]}, {"name": "Gold Motorcycle Detail", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 29500, "label": null}, {"name": "Touring / Bagger", "cents": 39500, "label": null}]}, {"name": "Platinum Motorcycle Ceramic", "monthly": false, "variations": [{"name": "Standard / Sport", "cents": 69500, "label": null}, {"name": "Touring / Bagger", "cents": 89500, "label": null}]}]}, {"category": "Interior Only", "services": [{"name": "Silver Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 21700, "label": null}, {"name": "Sedan", "cents": 25000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 29000, "label": null}, {"name": "Large SUV/Truck", "cents": 33500, "label": null}]}, {"name": "Gold Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 30000, "label": null}, {"name": "Sedan", "cents": 35000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 40000, "label": null}, {"name": "Large SUV/Truck", "cents": 47500, "label": null}]}, {"name": "Platinum Interior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 50000, "label": null}, {"name": "Sedan", "cents": 55000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 57500, "label": null}, {"name": "Large SUV/Truck", "cents": 60000, "label": null}]}]}, {"category": "Exterior Only", "services": [{"name": "Silver Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 21700, "label": null}, {"name": "Sedan", "cents": 30000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 35000, "label": null}, {"name": "Large SUV/Truck", "cents": 37500, "label": null}]}, {"name": "Gold Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 45000, "label": null}, {"name": "Sedan", "cents": 50000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 57500, "label": null}, {"name": "Large SUV/Crossover", "cents": 62500, "label": null}]}, {"name": "Platinum Exterior Detail", "monthly": false, "variations": [{"name": "Coupe", "cents": 70000, "label": null}, {"name": "Sedan", "cents": 75000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 80000, "label": null}, {"name": "Large SUV/Truck", "cents": 85000, "label": null}]}]}, {"category": "Ceramic Coating", "services": [{"name": "Silver Ceramic Coating Package (5 Year Shield)", "monthly": false, "variations": [{"name": "Coupe", "cents": 140000, "label": null}, {"name": "Sedan", "cents": 150000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 165000, "label": null}, {"name": "Large SUV/Truck", "cents": 185000, "label": null}]}, {"name": "Gold Ceramic Coating Package (10 Year Armor)", "monthly": false, "variations": [{"name": "Coupe", "cents": 180000, "label": null}, {"name": "Sedan", "cents": 200000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 220000, "label": null}, {"name": "Large SUV/Truck", "cents": 240000, "label": null}]}, {"name": "Platinum Ceramic Coating Package", "monthly": false, "variations": [{"name": "Coupe", "cents": 280000, "label": null}, {"name": "Sedan", "cents": 300000, "label": null}, {"name": "Mini SUV/Crossover", "cents": 320000, "label": null}, {"name": "Large SUV/Truck", "cents": 340000, "label": null}]}]}, {"category": "Paint Correction", "services": [{"name": "Paint Correction", "monthly": false, "variations": [{"name": "1-Step Correction - $450-$600 (starting at)", "cents": 45000, "label": null}, {"name": "2-Step Correction - $800-$1,050 (starting at)", "cents": 80000, "label": null}, {"name": "3-Step Correction - starting at", "cents": 125000, "label": null}, {"name": "2-Step Add-On with Ceramic Coating", "cents": 55000, "label": null}]}]}, {"category": "Military PCS Package", "services": [{"name": "PCS Ready Package", "monthly": false, "variations": [{"name": "Coupe", "cents": 34900, "label": null}, {"name": "Sedan", "cents": 37900, "label": null}, {"name": "Mini SUV/Crossover", "cents": 42900, "label": null}, {"name": "Large SUV/Truck", "cents": 47900, "label": null}]}]}, {"category": "Add On", "services": [{"name": "Headlight Restoration", "monthly": false, "variations": [{"name": "Regular", "cents": 9000, "label": null}]}, {"name": "Motorcycle Chrome & Metal Polish (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 7500, "label": null}]}, {"name": "Motorcycle Engine Degrease (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 5000, "label": null}]}, {"name": "Motorcycle Leather Conditioning (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 4000, "label": null}]}, {"name": "Motorcycle Heavy Soil (add-on)", "monthly": false, "variations": [{"name": "Regular", "cents": 5000, "label": null}]}]}, {"category": "Shine Club", "services": [{"name": "Members Only - Maintenance", "monthly": false, "variations": [{"name": "Weekly", "cents": 9500, "label": null}, {"name": "Quarterly", "cents": 22500, "label": null}]}, {"name": "Shine Club: Basic Membership", "monthly": true, "variations": [{"name": "Founder: $99/mo, locked while you stay a member", "cents": 9900, "label": null}, {"name": "Member: $149/mo", "cents": 14900, "label": null}]}, {"name": "Shine Club: Premium Membership", "monthly": true, "variations": [{"name": "Regular", "cents": 10900, "label": null}]}, {"name": "Shine Club: Elite Membership", "monthly": true, "variations": [{"name": "Regular", "cents": 16900, "label": null}]}]}, {"category": "Aircraft & Fleet", "services": [{"name": "Aircraft Detailing", "monthly": false, "variations": [{"name": "Regular", "cents": 0, "label": "Custom quote"}]}, {"name": "SUV/TRUCK/VAN Fleet", "monthly": false, "variations": [{"name": "Regular", "cents": 16000, "label": "Custom quote"}]}]}, {"category": "Other Services", "services": [{"name": "Water Extraction", "monthly": false, "variations": [{"name": "Regular", "cents": 40000, "label": null}]}]}, {"category": "Tint & PPF", "services": [{"name": "Window Tinting", "monthly": false, "variations": [{"name": "Front Two Windows - Standard Ceramic", "cents": 24900, "label": "Waitlist \u2014 January 2027"}, {"name": "Front Two Windows - Nano", "cents": 34900, "label": "Waitlist \u2014 January 2027"}, {"name": "All Sides + Rear - Standard Ceramic", "cents": 49900, "label": "Waitlist \u2014 January 2027"}, {"name": "All Sides + Rear - Nano", "cents": 74900, "label": "Waitlist \u2014 January 2027"}, {"name": "Windshield - Standard Ceramic", "cents": 29900, "label": "Waitlist \u2014 January 2027"}, {"name": "Windshield - Nano", "cents": 39900, "label": "Waitlist \u2014 January 2027"}, {"name": "Windshield Strip - Standard Ceramic", "cents": 9900, "label": "Waitlist \u2014 January 2027"}, {"name": "Windshield Strip - Nano", "cents": 14900, "label": "Waitlist \u2014 January 2027"}]}, {"name": "Paint Protection Film (PPF)", "monthly": false, "variations": [{"name": "Partial Front - starting at", "cents": 139900, "label": "Waitlist \u2014 January 2027"}, {"name": "Full Front - starting at", "cents": 229900, "label": "Waitlist \u2014 January 2027"}, {"name": "Track - starting at", "cents": 339900, "label": "Waitlist \u2014 January 2027"}, {"name": "Full Body - starting at", "cents": 650000, "label": "Waitlist \u2014 January 2027"}, {"name": "Windshield Film - starting at", "cents": 45000, "label": "Waitlist \u2014 January 2027"}]}]}]</script>
 <script>
-  const pricingMatrix = {
-    silver_full: {
-      label: 'SILVER FULL DETAIL',
-      prices: { coupe: 230, sedan: 250, midsuv: 290, largesuv: 350 },
-      badge: 'INSTANT SQUARE SLOT',
-      note: '✓ Standard Full Detail: Bypasses photo friction for immediate appointment scheduling.'
-    },
-    gold_full: {
-      label: 'GOLD FULL DETAIL',
-      prices: { coupe: 450, sedan: 525, midsuv: 600, largesuv: 675 },
-      badge: 'INSTANT SQUARE SLOT',
-      note: '✓ Deep Interior + Exterior Clay & Sealant: Includes 4-corner arrival & 5-photo QA receipt.'
-    },
-    ceramic_silver: {
-      label: 'SYSTEM X 5-YR CERAMIC',
-      prices: { coupe: 1400, sedan: 1500, midsuv: 1650, largesuv: 1850 },
-      badge: '3-PHOTO OPTICAL GATE',
-      note: '⚡ Triggers 3-Photo Sunlit Optical Underwriting via SMS so we dial in the exact polish stage.'
-    },
-    shine_club: {
-      label: 'THE SHINE CLUB MEMBERSHIP',
-      prices: { coupe: 149, sedan: 149, midsuv: 149, largesuv: 149 },
-      badge: 'MONTHLY RECURRING',
-      note: '★ Priority recurring maintenance care ($149/mo standard | $99/mo founding rate, locked while you stay a member).'
-    }
-  };
-
-  let currentSize = 'sedan';
-  let currentPkg = 'silver_full';
-
-  function setSize(size, btn) {
-    currentSize = size;
-    document.querySelectorAll('#sizeGrid .select-pill').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderQuote();
-  }
-
-  function setPkg(pkg, btn) {
-    currentPkg = pkg;
-    document.querySelectorAll('#pkgGrid .select-pill').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderQuote();
-  }
-
-  function renderQuote() {
-    const pkgObj = pricingMatrix[currentPkg];
-    const price = pkgObj.prices[currentSize];
-    const sizeLabel = currentSize.toUpperCase();
-    document.getElementById('selectedTitle').textContent = `${sizeLabel} // ${pkgObj.label}`;
-    document.getElementById('priceOutput').textContent = currentPkg === 'shine_club' ? `$${price}/mo` : `$${price}`;
-    document.getElementById('intakeModeBadge').textContent = pkgObj.badge;
-    document.getElementById('processExplanation').textContent = pkgObj.note;
-
-    const smsBody = encodeURIComponent(
-      currentPkg === 'ceramic_silver'
-        ? `Hi Shine My Ride 757, I want to lock in a ${sizeLabel} ${pkgObj.label} ($${price} baseline). Ready to send my 3 sunlit paint photos!`
-        : `Hi Shine My Ride 757, I'd like to schedule a ${sizeLabel} ${pkgObj.label} ($${price} baseline).`
-    );
-    document.getElementById('primaryActionBtn').href = `sms:17576899821?&body=${smsBody}`;
-  }
-</script>
-</body>
-</html>
+const D=JSON.parse(document.getElementById('square-data').textContent);let ci=0;
+const $=id=>document.getElementById(id);
+function money(c){return '$'+(c/100).toLocaleString('en-US',{minimumFractionDigits:c%100?2:0})}
+function tabs(){$('tabs').innerHTML='';D.forEach((c,i)=>{const b=document.createElement('button');b.className='select-pill'+(i==ci?' active':'');b.textContent=c.category;b.onclick=()=>{ci=i;tabs();svcs()};$('tabs').appendChild(b)})}
+function svcs(){$('svc').innerHTML=D[ci].services.map((s,i)=>`<option value="${i}">${s.name}</option>`).join('');vars()}
+function vars(){const s=D[ci].services[$('svc').value];$('var').innerHTML=s.variations.map((v,i)=>`<option value="${i}">${v.name}</option>`).join('');$('var').parentNode;render()}
+function render(){const s=D[ci].services[$('svc').value],v=s.variations[$('var').value];
+const p=v.label||(money(v.cents)+(s.monthly?'/mo':''));const wait=(v.label||'').startsWith('Waitlist');
+$('title').textContent=s.name+' // '+v.name;$('price').textContent=p;$('price').style.fontSize=v.label?'1.4rem':'';
+$('badge').textContent=wait?'WAITLIST':(v.label?'CUSTOM QUOTE':'SQUARE PRICE');
+$('sq').style.display=wait?'none':'block';
+const msg=wait?`Hi Shine My Ride 757, please add me to the January 2027 waitlist for ${s.name} (${v.name}).`:`Hi Shine My Ride 757, I'd like to book ${s.name} (${v.name}) - ${p}.`;
+$('sms').href='sms:+17576899821?&body='+encodeURIComponent(msg);$('sms').textContent=wait?'Join the Waitlist via SMS (757-689-9821) →':'Lock In My Price via SMS (757-689-9821) →'}
+$('svc').onchange=vars;$('var').onchange=render;tabs();svcs();
+</script></body></html>
